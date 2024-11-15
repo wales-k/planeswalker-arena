@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("/static/img/bg.png");
+    background-color: #282a36a9;
+    color: #333;
+    margin: auto;
+    padding: 10rem;
+}
+
+.top-bar {
+    background-color: #282a36a9; /* Background color for the top bar */
+    padding: 10px; /* Padding around the bar */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    position: fixed;
+    top: 0;
+    left:0;
+    width:100%;
+    z-index:1;
+    border-bottom: solid;
+}
+
+.title{
+    color:white;
+    margin:auto;
+    font-weight: 600;
+}
+
+.global-font {
+    font-family: "Sorts Mill Goudy", serif;
+    font-style: normal;
+}
+
+.game-zone {
+display: grid;
+grid-template-columns: 0.25fr 1fr 0.25fr 0.1fr 1fr 0.1fr 0.25fr 1fr 0.25fr;
+grid-template-rows: .025fr .25fr 1fr 0.1fr 0.5fr 0.025fr,auto;
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+margin:auto;
+width: 95;
+background-color: #282a36a9;
+border-radius: 10px;
+padding: 1rem;
+}
+
+.border {
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.p1-name{ 
+    grid-area: 2 / 2 / 3 / 3;
+    color:white;
+    align-content:space-around;
+    margin:inherit;
+    font-size:2rem; 
+}
+
+.p1-health-val { 
+    grid-area: 3 / 2 / 4 / 3;
+    color:white;
+    align-content:space-around;
+    margin:auto;  
+    font-size: 10rem;
+}
+
+.p1-health-sub{ 
+    grid-area: 3 / 1 / 4 / 2;
+    color:white;
+    margin:auto;
+    font-size: 10rem;
+ }
+
+ .button-health-sub{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color:white;
+    background-color: #ff5555cb ; 
+    margin:auto;
+    width: 50;
+    font-size: 8.5rem;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.p1-health-add { 
+    grid-area: 3 / 3 / 4 / 4;
+    margin: auto;
+}
+
+.button-health-add{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color:white;
+    background-color: #50fa7ad8 ;
+    margin:auto;
+    width: 50;
+    font-size: 9rem;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    /*padding-top: 2rem;
+    padding-bottom: 2rem;*/
+}
+
+.p1-tox-health-val{ 
+    grid-area: 5 / 2 / 6 / 3;
+    color:white;
+    align-content:space-around;
+    margin:auto;  
+    font-size: 5em;
+ }
+ 
+.p1-tox-sub { 
+    grid-area: 5 / 1 / 6 / 2; 
+ 
+}
+
+.button-tox-sub{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color:white;
+    background-color: #ff5555cb ; 
+    margin:auto;
+    font-size: 5rem;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.p1-tox-add { 
+    grid-area: 5 / 3 / 6 / 4;
+}
+
+.button-tox-add{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    color:white;
+    background-color: #50fa7ad8 ;
+    margin:auto;
+    font-size: 5rem;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.vs-icon { 
+    grid-area: 3 / 5 / 4 / 6;
+    margin:auto; 
+}
+
+.reset-button { 
+    grid-area: 5 / 5 / 6 / 6;
+    margin:auto; 
+}
+
+.reset-button-style {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    background-color:#33333300;
+    margin:auto;
+    width: 50;
+    font-size: 8.5rem;
+    border-style: solid;
+    border-radius: 20px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.p2-name { 
+    grid-area: 2 / 8 / 3 / 9;
+    color:white;
+    align-content:space-around;
+    margin:inherit;
+    font-size:2rem; 
+}
+
+.p2-health-val { 
+    grid-area: 3 / 8 / 4 / 9;
+    color:white;
+    align-content:space-around;
+    margin:auto;  
+    font-size: 10em; 
+}
+
+.p2-health-sub { 
+    grid-area: 3 / 7 / 4 / 8;
+    margin:auto;
+ }
+
+.p2-health-add { 
+    grid-area: 3 / 9 / 4 / 10;
+    margin:auto;
+}
+
+.p2-tox-health-val { 
+    grid-area: 5 / 8 / 6 / 9;
+    color:white;
+    align-content:space-around;
+    margin:auto;  
+    font-size: 5em;
+}
+
+.p2-tox-sub { 
+    grid-area: 5 / 7 / 6 / 8;
+}
+
+.p2-tox-add { 
+    grid-area: 5 / 9 / 6 / 10;
+}

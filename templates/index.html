@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sorts+Mill+Goudy:ital@0;1&display=swap" rel="stylesheet">
+<title>VS Design</title>
+</head>
+<header>
+<div class="top-bar">
+     <h1 class="title global-font"> Planewalker Arena </h1>
+</div>
+</header>
+<body>
+    <script src="{{ url_for('static', filename='handlers.js') }}"></script>
+  <div class="game-zone global-font">
+    <div class="p1-name global-font ">Player One</div>
+    <div class="p1-health-val global-font " id="pOnePool">{{ pOnePool }}</div>
+    <div class="p1-health-add"><button class="button-health-add global-font"  onclick="p1_increment_health()">+</button></div>
+    <div class="p1-health-sub"><button class="button-health-sub global-font" onclick="p1_decrement_health()">-</button></div>
+    <div class="p1-tox-health-val global-font " id="pOneTox">{{ pOneTox }}</div>
+    <div class="p1-tox-sub "> <button class="button-tox-sub global-font" onclick="p1_decrement_tox()">-</button> </div> 
+    <div class="p1-tox-add"><button class="button-tox-add global-font" onclick="p1_increment_tox()">+</button></div> 
+
+    <!-- "vs." text -->
+    <div class="vs-icon"><img src="{{ url_for('static', filename='img/vs.png') }}" width="300" height="300"></div>
+    <div class="reset-button"> <button onclick="resetGame()" class="reset-button-style"><img src="{{ url_for('static', filename='img/reset.png') }}"></button></div>
+
+    <!-- Second box with dark gray elements (same structure as the first) -->
+    <div class="p2-name global-font ">Player Two</div>
+    <div class="p2-health-val global-font " id="pTwoPool">{{ pTwoPool }}</div>
+    <div class="p2-health-add"><button class="button-health-add global-font" onclick="p2_increment_health()">+</button></div>
+    <div class="p2-health-sub"><button class="button-health-sub global-font" onclick="p2_decrement_health()">-</button></div>
+    <div class="p2-tox-health-val global-font " id="pTwoTox">{{ pTwoTox }}</div>
+    <div class="p2-tox-sub "> <button class="button-tox-sub global-font" onclick="p2_decrement_tox()">-</button> </div> 
+    <div class="p2-tox-add"><button class="button-tox-add global-font" onclick="p2_increment_tox()">+</button></div> 
+  </div>
+  
+
+</body>
+</html>
